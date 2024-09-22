@@ -24,9 +24,12 @@ const ApartmentSchema: Schema = new Schema({
   price: { type: Number, required: true },
   location: { type: String, required: true },
   description: { type: String, required: false },
+  moreDetails: { type: String, required: false },
   images: [{ type: String, required: false }],
-  rooms: { type: Number, required: true },
+  rooms: { type: Number, required: false },
+  bathrooms: { type: Number, required: false },
   size: { type: Number, required: true },
+  yearBuilt: { type: Number, required: false },
   available: { type: Boolean, default: true }
 });
 
