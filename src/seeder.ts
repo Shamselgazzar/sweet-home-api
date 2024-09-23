@@ -252,6 +252,7 @@ const seedApartments = async () => {
     console.log('Connected to MongoDB');
     
     const imageUrls = await getUnsplashImageUrls("house", apartments.length+2);
+    
     for (let i = 0; i < apartments.length; i++) {
       apartments[i].images = [imageUrls[i], imageUrls[i+1], imageUrls[i+2]];
     }
